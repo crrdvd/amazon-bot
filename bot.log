@@ -1,0 +1,283 @@
+2020-11-15 11:11:59,562 - telegram.ext.dispatcher - DEBUG - Setting singleton dispatcher as <telegram.ext.dispatcher.Dispatcher object at 0x709ed7f0>
+2020-11-15 11:11:59,565 - apscheduler.scheduler - INFO - Scheduler started
+2020-11-15 11:11:59,566 - apscheduler.scheduler - DEBUG - Looking for jobs to run
+2020-11-15 11:11:59,567 - telegram.bot - DEBUG - Entering: get_me
+2020-11-15 11:11:59,568 - apscheduler.scheduler - DEBUG - No jobs; waiting until a job is added
+2020-11-15 11:11:59,570 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.telegram.org
+2020-11-15 11:11:59,881 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - DEBUG - https://api.telegram.org:443 "POST /bot1431872649:AAE0CmcJMDjQKA5PFDKlgkFfQ-_FP2hAxUg/getMe HTTP/1.1" 200 200
+2020-11-15 11:11:59,883 - telegram.bot - DEBUG - {'id': 1431872649, 'first_name': 'AmazonTracker', 'is_bot': True, 'username': 'AMZNscraperBot', 'can_join_groups': True, 'can_read_all_group_messages': False, 'supports_inline_queries': False}
+2020-11-15 11:11:59,884 - telegram.bot - DEBUG - Exiting: get_me
+2020-11-15 11:11:59,884 - telegram.bot - DEBUG - Entering: get_my_commands
+2020-11-15 11:11:59,970 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - DEBUG - https://api.telegram.org:443 "POST /bot1431872649:AAE0CmcJMDjQKA5PFDKlgkFfQ-_FP2hAxUg/getMyCommands HTTP/1.1" 200 23
+2020-11-15 11:11:59,971 - telegram.bot - DEBUG - []
+2020-11-15 11:11:59,971 - telegram.bot - DEBUG - Exiting: get_my_commands
+2020-11-15 11:11:59,972 - telegram.ext.updater - DEBUG - Bot:1431872649:dispatcher - started
+2020-11-15 11:11:59,973 - telegram.ext.updater - DEBUG - Bot:1431872649:updater - started
+2020-11-15 11:11:59,974 - telegram.ext.updater - DEBUG - Waiting for Dispatcher and polling to start
+2020-11-15 11:11:59,974 - telegram.ext.updater - DEBUG - Updater thread started (polling)
+2020-11-15 11:11:59,975 - telegram.ext.updater - DEBUG - Start network loop retry bootstrap del webhook
+2020-11-15 11:11:59,976 - telegram.bot - DEBUG - Entering: delete_webhook
+2020-11-15 11:11:59,979 - telegram.ext.dispatcher - DEBUG - Dispatcher started
+2020-11-15 11:12:00,044 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - DEBUG - https://api.telegram.org:443 "POST /bot1431872649:AAE0CmcJMDjQKA5PFDKlgkFfQ-_FP2hAxUg/deleteWebhook HTTP/1.1" 200 68
+2020-11-15 11:12:00,046 - telegram.bot - DEBUG - True
+2020-11-15 11:12:00,046 - telegram.bot - DEBUG - Exiting: delete_webhook
+2020-11-15 11:12:00,046 - telegram.ext.updater - DEBUG - Bootstrap done
+2020-11-15 11:12:00,046 - telegram.ext.updater - DEBUG - Start network loop retry getting Updates
+2020-11-15 11:12:00,047 - telegram.bot - DEBUG - Entering: get_updates
+2020-11-15 11:12:00,108 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - DEBUG - https://api.telegram.org:443 "POST /bot1431872649:AAE0CmcJMDjQKA5PFDKlgkFfQ-_FP2hAxUg/getUpdates HTTP/1.1" 200 698
+2020-11-15 11:12:00,109 - telegram.bot - DEBUG - Getting updates: [514363311, 514363312]
+2020-11-15 11:12:00,111 - telegram.bot - DEBUG - [<telegram.update.Update object at 0x70126390>, <telegram.update.Update object at 0x70126430>]
+2020-11-15 11:12:00,111 - telegram.bot - DEBUG - Exiting: get_updates
+2020-11-15 11:12:00,112 - telegram.bot - DEBUG - Entering: get_updates
+2020-11-15 11:12:00,113 - telegram.ext.dispatcher - DEBUG - Processing Update: {'update_id': 514363311, 'message': {'message_id': 247, 'date': 1605435084, 'chat': {'id': 106115352, 'type': 'private', 'first_name': 'Davide', 'last_name': 'Corradini'}, 'text': '/help', 'entities': [{'type': 'bot_command', 'offset': 0, 'length': 5}], 'caption_entities': [], 'photo': [], 'new_chat_members': [], 'new_chat_photo': [], 'delete_chat_photo': False, 'group_chat_created': False, 'supergroup_chat_created': False, 'channel_chat_created': False, 'from': {'id': 106115352, 'first_name': 'Davide', 'is_bot': False, 'last_name': 'Corradini', 'language_code': 'it'}}}
+2020-11-15 11:12:00,114 - telegram.bot - DEBUG - Entering: send_message
+2020-11-15 11:12:00,115 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - DEBUG - Starting new HTTPS connection (2): api.telegram.org
+2020-11-15 11:12:00,415 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - DEBUG - https://api.telegram.org:443 "POST /bot1431872649:AAE0CmcJMDjQKA5PFDKlgkFfQ-_FP2hAxUg/sendMessage HTTP/1.1" 400 73
+2020-11-15 11:12:00,416 - telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/telegram/ext/dispatcher.py", line 425, in process_update
+    handler.handle_update(update, self, check, context)
+  File "/home/pi/.local/lib/python3.7/site-packages/telegram/ext/handler.py", line 145, in handle_update
+    return self.callback(update, context)
+  File "script.py", line 98, in help
+    context.bot.send_message(chat_id=c_id, text=msg)
+  File "<decorator-gen-2>", line 2, in send_message
+  File "/home/pi/.local/lib/python3.7/site-packages/telegram/bot.py", line 78, in decorator
+    result = func(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/telegram/bot.py", line 385, in send_message
+    timeout=timeout, api_kwargs=api_kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/telegram/bot.py", line 215, in _message
+    result = self._post(endpoint, data, timeout=timeout, api_kwargs=api_kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/telegram/bot.py", line 185, in _post
+    timeout=timeout)
+  File "/home/pi/.local/lib/python3.7/site-packages/telegram/utils/request.py", line 328, in post
+    **urlopen_kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/telegram/utils/request.py", line 250, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Chat not found
+2020-11-15 11:12:00,430 - telegram.ext.dispatcher - DEBUG - Processing Update: {'update_id': 514363312, 'message': {'message_id': 248, 'date': 1605435119, 'chat': {'id': 106115352, 'type': 'private', 'first_name': 'Davide', 'last_name': 'Corradini'}, 'text': '/help', 'entities': [{'type': 'bot_command', 'offset': 0, 'length': 5}], 'caption_entities': [], 'photo': [], 'new_chat_members': [], 'new_chat_photo': [], 'delete_chat_photo': False, 'group_chat_created': False, 'supergroup_chat_created': False, 'channel_chat_created': False, 'from': {'id': 106115352, 'first_name': 'Davide', 'is_bot': False, 'last_name': 'Corradini', 'language_code': 'it'}}}
+2020-11-15 11:12:00,430 - telegram.bot - DEBUG - Entering: send_message
+2020-11-15 11:12:00,491 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - DEBUG - https://api.telegram.org:443 "POST /bot1431872649:AAE0CmcJMDjQKA5PFDKlgkFfQ-_FP2hAxUg/sendMessage HTTP/1.1" 400 73
+2020-11-15 11:12:00,493 - telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/telegram/ext/dispatcher.py", line 425, in process_update
+    handler.handle_update(update, self, check, context)
+  File "/home/pi/.local/lib/python3.7/site-packages/telegram/ext/handler.py", line 145, in handle_update
+    return self.callback(update, context)
+  File "script.py", line 98, in help
+    context.bot.send_message(chat_id=c_id, text=msg)
+  File "<decorator-gen-2>", line 2, in send_message
+  File "/home/pi/.local/lib/python3.7/site-packages/telegram/bot.py", line 78, in decorator
+    result = func(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/telegram/bot.py", line 385, in send_message
+    timeout=timeout, api_kwargs=api_kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/telegram/bot.py", line 215, in _message
+    result = self._post(endpoint, data, timeout=timeout, api_kwargs=api_kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/telegram/bot.py", line 185, in _post
+    timeout=timeout)
+  File "/home/pi/.local/lib/python3.7/site-packages/telegram/utils/request.py", line 328, in post
+    **urlopen_kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/telegram/utils/request.py", line 250, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Chat not found
+2020-11-15 11:12:10,194 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - DEBUG - https://api.telegram.org:443 "POST /bot1431872649:AAE0CmcJMDjQKA5PFDKlgkFfQ-_FP2hAxUg/getUpdates HTTP/1.1" 200 23
+2020-11-15 11:12:10,196 - telegram.bot - DEBUG - No new updates found.
+2020-11-15 11:12:10,197 - telegram.bot - DEBUG - []
+2020-11-15 11:12:10,197 - telegram.bot - DEBUG - Exiting: get_updates
+2020-11-15 11:12:10,198 - telegram.bot - DEBUG - Entering: get_updates
+2020-11-15 11:12:14,933 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - DEBUG - https://api.telegram.org:443 "POST /bot1431872649:AAE0CmcJMDjQKA5PFDKlgkFfQ-_FP2hAxUg/getUpdates HTTP/1.1" 200 372
+2020-11-15 11:12:14,934 - telegram.bot - DEBUG - Getting updates: [514363313]
+2020-11-15 11:12:14,935 - telegram.bot - DEBUG - [<telegram.update.Update object at 0x701264b0>]
+2020-11-15 11:12:14,936 - telegram.bot - DEBUG - Exiting: get_updates
+2020-11-15 11:12:14,936 - telegram.bot - DEBUG - Entering: get_updates
+2020-11-15 11:12:14,937 - telegram.ext.dispatcher - DEBUG - Processing Update: {'update_id': 514363313, 'message': {'message_id': 249, 'date': 1605435134, 'chat': {'id': 106115352, 'type': 'private', 'first_name': 'Davide', 'last_name': 'Corradini'}, 'text': '/debugconnection', 'entities': [{'type': 'bot_command', 'offset': 0, 'length': 16}], 'caption_entities': [], 'photo': [], 'new_chat_members': [], 'new_chat_photo': [], 'delete_chat_photo': False, 'group_chat_created': False, 'supergroup_chat_created': False, 'channel_chat_created': False, 'from': {'id': 106115352, 'first_name': 'Davide', 'is_bot': False, 'last_name': 'Corradini', 'language_code': 'it'}}}
+2020-11-15 11:12:14,939 - telegram.bot - DEBUG - Entering: send_message
+2020-11-15 11:12:15,039 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - DEBUG - https://api.telegram.org:443 "POST /bot1431872649:AAE0CmcJMDjQKA5PFDKlgkFfQ-_FP2hAxUg/sendMessage HTTP/1.1" 400 73
+2020-11-15 11:12:15,040 - telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/telegram/ext/dispatcher.py", line 425, in process_update
+    handler.handle_update(update, self, check, context)
+  File "/home/pi/.local/lib/python3.7/site-packages/telegram/ext/handler.py", line 145, in handle_update
+    return self.callback(update, context)
+  File "script.py", line 70, in debug_connection
+    context.bot.send_message(chat_id=c_id, text=msg)
+  File "<decorator-gen-2>", line 2, in send_message
+  File "/home/pi/.local/lib/python3.7/site-packages/telegram/bot.py", line 78, in decorator
+    result = func(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/telegram/bot.py", line 385, in send_message
+    timeout=timeout, api_kwargs=api_kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/telegram/bot.py", line 215, in _message
+    result = self._post(endpoint, data, timeout=timeout, api_kwargs=api_kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/telegram/bot.py", line 185, in _post
+    timeout=timeout)
+  File "/home/pi/.local/lib/python3.7/site-packages/telegram/utils/request.py", line 328, in post
+    **urlopen_kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/telegram/utils/request.py", line 250, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Chat not found
+2020-11-15 11:12:25,022 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - DEBUG - https://api.telegram.org:443 "POST /bot1431872649:AAE0CmcJMDjQKA5PFDKlgkFfQ-_FP2hAxUg/getUpdates HTTP/1.1" 200 23
+2020-11-15 11:12:25,024 - telegram.bot - DEBUG - No new updates found.
+2020-11-15 11:12:25,024 - telegram.bot - DEBUG - []
+2020-11-15 11:12:25,025 - telegram.bot - DEBUG - Exiting: get_updates
+2020-11-15 11:12:25,025 - telegram.bot - DEBUG - Entering: get_updates
+2020-11-15 11:12:35,084 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - DEBUG - https://api.telegram.org:443 "POST /bot1431872649:AAE0CmcJMDjQKA5PFDKlgkFfQ-_FP2hAxUg/getUpdates HTTP/1.1" 200 23
+2020-11-15 11:12:35,085 - telegram.bot - DEBUG - No new updates found.
+2020-11-15 11:12:35,086 - telegram.bot - DEBUG - []
+2020-11-15 11:12:35,087 - telegram.bot - DEBUG - Exiting: get_updates
+2020-11-15 11:12:35,087 - telegram.bot - DEBUG - Entering: get_updates
+2020-11-15 11:13:11,254 - telegram.ext.dispatcher - DEBUG - Setting singleton dispatcher as <telegram.ext.dispatcher.Dispatcher object at 0x709727b0>
+2020-11-15 11:13:11,257 - apscheduler.scheduler - INFO - Scheduler started
+2020-11-15 11:13:11,258 - apscheduler.scheduler - DEBUG - Looking for jobs to run
+2020-11-15 11:13:11,259 - telegram.bot - DEBUG - Entering: get_me
+2020-11-15 11:13:11,260 - apscheduler.scheduler - DEBUG - No jobs; waiting until a job is added
+2020-11-15 11:13:11,262 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.telegram.org
+2020-11-15 11:13:11,537 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - DEBUG - https://api.telegram.org:443 "POST /bot1431872649:AAE0CmcJMDjQKA5PFDKlgkFfQ-_FP2hAxUg/getMe HTTP/1.1" 200 200
+2020-11-15 11:13:11,539 - telegram.bot - DEBUG - {'id': 1431872649, 'first_name': 'AmazonTracker', 'is_bot': True, 'username': 'AMZNscraperBot', 'can_join_groups': True, 'can_read_all_group_messages': False, 'supports_inline_queries': False}
+2020-11-15 11:13:11,540 - telegram.bot - DEBUG - Exiting: get_me
+2020-11-15 11:13:11,540 - telegram.bot - DEBUG - Entering: get_my_commands
+2020-11-15 11:13:11,615 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - DEBUG - https://api.telegram.org:443 "POST /bot1431872649:AAE0CmcJMDjQKA5PFDKlgkFfQ-_FP2hAxUg/getMyCommands HTTP/1.1" 200 23
+2020-11-15 11:13:11,617 - telegram.bot - DEBUG - []
+2020-11-15 11:13:11,617 - telegram.bot - DEBUG - Exiting: get_my_commands
+2020-11-15 11:13:11,618 - telegram.ext.updater - DEBUG - Bot:1431872649:dispatcher - started
+2020-11-15 11:13:11,619 - telegram.ext.updater - DEBUG - Bot:1431872649:updater - started
+2020-11-15 11:13:11,620 - telegram.ext.updater - DEBUG - Waiting for Dispatcher and polling to start
+2020-11-15 11:13:11,620 - telegram.ext.updater - DEBUG - Updater thread started (polling)
+2020-11-15 11:13:11,621 - telegram.ext.updater - DEBUG - Start network loop retry bootstrap del webhook
+2020-11-15 11:13:11,622 - telegram.bot - DEBUG - Entering: delete_webhook
+2020-11-15 11:13:11,624 - telegram.ext.dispatcher - DEBUG - Dispatcher started
+2020-11-15 11:13:11,686 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - DEBUG - https://api.telegram.org:443 "POST /bot1431872649:AAE0CmcJMDjQKA5PFDKlgkFfQ-_FP2hAxUg/deleteWebhook HTTP/1.1" 200 68
+2020-11-15 11:13:11,687 - telegram.bot - DEBUG - True
+2020-11-15 11:13:11,687 - telegram.bot - DEBUG - Exiting: delete_webhook
+2020-11-15 11:13:11,687 - telegram.ext.updater - DEBUG - Bootstrap done
+2020-11-15 11:13:11,688 - telegram.ext.updater - DEBUG - Start network loop retry getting Updates
+2020-11-15 11:13:11,688 - telegram.bot - DEBUG - Entering: get_updates
+2020-11-15 11:13:11,749 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - DEBUG - https://api.telegram.org:443 "POST /bot1431872649:AAE0CmcJMDjQKA5PFDKlgkFfQ-_FP2hAxUg/getUpdates HTTP/1.1" 200 360
+2020-11-15 11:13:11,750 - telegram.bot - DEBUG - Getting updates: [514363314]
+2020-11-15 11:13:11,751 - telegram.bot - DEBUG - [<telegram.update.Update object at 0x6ffa6330>]
+2020-11-15 11:13:11,751 - telegram.bot - DEBUG - Exiting: get_updates
+2020-11-15 11:13:11,752 - telegram.bot - DEBUG - Entering: get_updates
+2020-11-15 11:13:11,753 - telegram.ext.dispatcher - DEBUG - Processing Update: {'update_id': 514363314, 'message': {'message_id': 250, 'date': 1605435190, 'chat': {'id': 106115352, 'type': 'private', 'first_name': 'Davide', 'last_name': 'Corradini'}, 'text': '/help', 'entities': [{'type': 'bot_command', 'offset': 0, 'length': 5}], 'caption_entities': [], 'photo': [], 'new_chat_members': [], 'new_chat_photo': [], 'delete_chat_photo': False, 'group_chat_created': False, 'supergroup_chat_created': False, 'channel_chat_created': False, 'from': {'id': 106115352, 'first_name': 'Davide', 'is_bot': False, 'last_name': 'Corradini', 'language_code': 'it'}}}
+2020-11-15 11:13:11,754 - telegram.bot - DEBUG - Entering: send_message
+2020-11-15 11:13:11,756 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - DEBUG - Starting new HTTPS connection (2): api.telegram.org
+2020-11-15 11:13:12,082 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - DEBUG - https://api.telegram.org:443 "POST /bot1431872649:AAE0CmcJMDjQKA5PFDKlgkFfQ-_FP2hAxUg/sendMessage HTTP/1.1" 400 73
+2020-11-15 11:13:12,083 - telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/telegram/ext/dispatcher.py", line 425, in process_update
+    handler.handle_update(update, self, check, context)
+  File "/home/pi/.local/lib/python3.7/site-packages/telegram/ext/handler.py", line 145, in handle_update
+    return self.callback(update, context)
+  File "script.py", line 98, in help
+    context.bot.send_message(chat_id=c_id, text=msg)
+  File "<decorator-gen-2>", line 2, in send_message
+  File "/home/pi/.local/lib/python3.7/site-packages/telegram/bot.py", line 78, in decorator
+    result = func(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/telegram/bot.py", line 385, in send_message
+    timeout=timeout, api_kwargs=api_kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/telegram/bot.py", line 215, in _message
+    result = self._post(endpoint, data, timeout=timeout, api_kwargs=api_kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/telegram/bot.py", line 185, in _post
+    timeout=timeout)
+  File "/home/pi/.local/lib/python3.7/site-packages/telegram/utils/request.py", line 328, in post
+    **urlopen_kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/telegram/utils/request.py", line 250, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Chat not found
+2020-11-15 11:13:21,821 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - DEBUG - https://api.telegram.org:443 "POST /bot1431872649:AAE0CmcJMDjQKA5PFDKlgkFfQ-_FP2hAxUg/getUpdates HTTP/1.1" 200 23
+2020-11-15 11:13:21,824 - telegram.bot - DEBUG - No new updates found.
+2020-11-15 11:13:21,824 - telegram.bot - DEBUG - []
+2020-11-15 11:13:21,825 - telegram.bot - DEBUG - Exiting: get_updates
+2020-11-15 11:13:21,826 - telegram.bot - DEBUG - Entering: get_updates
+2020-11-15 11:13:45,039 - telegram.ext.dispatcher - DEBUG - Setting singleton dispatcher as <telegram.ext.dispatcher.Dispatcher object at 0x7091d730>
+2020-11-15 11:13:45,042 - apscheduler.scheduler - INFO - Scheduler started
+2020-11-15 11:13:45,044 - apscheduler.scheduler - DEBUG - Looking for jobs to run
+2020-11-15 11:13:45,044 - telegram.bot - DEBUG - Entering: get_me
+2020-11-15 11:13:45,045 - apscheduler.scheduler - DEBUG - No jobs; waiting until a job is added
+2020-11-15 11:13:45,047 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.telegram.org
+2020-11-15 11:13:45,326 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - DEBUG - https://api.telegram.org:443 "POST /bot1431872649:AAE0CmcJMDjQKA5PFDKlgkFfQ-_FP2hAxUg/getMe HTTP/1.1" 200 200
+2020-11-15 11:13:45,329 - telegram.bot - DEBUG - {'id': 1431872649, 'first_name': 'AmazonTracker', 'is_bot': True, 'username': 'AMZNscraperBot', 'can_join_groups': True, 'can_read_all_group_messages': False, 'supports_inline_queries': False}
+2020-11-15 11:13:45,329 - telegram.bot - DEBUG - Exiting: get_me
+2020-11-15 11:13:45,329 - telegram.bot - DEBUG - Entering: get_my_commands
+2020-11-15 11:13:45,388 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - DEBUG - https://api.telegram.org:443 "POST /bot1431872649:AAE0CmcJMDjQKA5PFDKlgkFfQ-_FP2hAxUg/getMyCommands HTTP/1.1" 200 23
+2020-11-15 11:13:45,389 - telegram.bot - DEBUG - []
+2020-11-15 11:13:45,390 - telegram.bot - DEBUG - Exiting: get_my_commands
+2020-11-15 11:13:45,390 - telegram.ext.updater - DEBUG - Bot:1431872649:dispatcher - started
+2020-11-15 11:13:45,392 - telegram.ext.updater - DEBUG - Bot:1431872649:updater - started
+2020-11-15 11:13:45,392 - telegram.ext.updater - DEBUG - Waiting for Dispatcher and polling to start
+2020-11-15 11:13:45,392 - telegram.ext.updater - DEBUG - Updater thread started (polling)
+2020-11-15 11:13:45,394 - telegram.ext.updater - DEBUG - Start network loop retry bootstrap del webhook
+2020-11-15 11:13:45,394 - telegram.bot - DEBUG - Entering: delete_webhook
+2020-11-15 11:13:45,397 - telegram.ext.dispatcher - DEBUG - Dispatcher started
+2020-11-15 11:13:45,451 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - DEBUG - https://api.telegram.org:443 "POST /bot1431872649:AAE0CmcJMDjQKA5PFDKlgkFfQ-_FP2hAxUg/deleteWebhook HTTP/1.1" 200 68
+2020-11-15 11:13:45,453 - telegram.bot - DEBUG - True
+2020-11-15 11:13:45,453 - telegram.bot - DEBUG - Exiting: delete_webhook
+2020-11-15 11:13:45,453 - telegram.ext.updater - DEBUG - Bootstrap done
+2020-11-15 11:13:45,454 - telegram.ext.updater - DEBUG - Start network loop retry getting Updates
+2020-11-15 11:13:45,454 - telegram.bot - DEBUG - Entering: get_updates
+2020-11-15 11:13:55,515 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - DEBUG - https://api.telegram.org:443 "POST /bot1431872649:AAE0CmcJMDjQKA5PFDKlgkFfQ-_FP2hAxUg/getUpdates HTTP/1.1" 200 23
+2020-11-15 11:13:55,516 - telegram.bot - DEBUG - No new updates found.
+2020-11-15 11:13:55,517 - telegram.bot - DEBUG - []
+2020-11-15 11:13:55,517 - telegram.bot - DEBUG - Exiting: get_updates
+2020-11-15 11:13:55,517 - telegram.bot - DEBUG - Entering: get_updates
+2020-11-15 11:14:13,750 - telegram.ext.dispatcher - DEBUG - Setting singleton dispatcher as <telegram.ext.dispatcher.Dispatcher object at 0x70978870>
+2020-11-15 11:14:13,752 - apscheduler.scheduler - INFO - Scheduler started
+2020-11-15 11:14:13,754 - apscheduler.scheduler - DEBUG - Looking for jobs to run
+2020-11-15 11:14:13,754 - telegram.bot - DEBUG - Entering: get_me
+2020-11-15 11:14:13,755 - apscheduler.scheduler - DEBUG - No jobs; waiting until a job is added
+2020-11-15 11:14:13,757 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.telegram.org
+2020-11-15 11:14:14,039 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - DEBUG - https://api.telegram.org:443 "POST /bot1431872649:AAE0CmcJMDjQKA5PFDKlgkFfQ-_FP2hAxUg/getMe HTTP/1.1" 200 200
+2020-11-15 11:14:14,041 - telegram.bot - DEBUG - {'id': 1431872649, 'first_name': 'AmazonTracker', 'is_bot': True, 'username': 'AMZNscraperBot', 'can_join_groups': True, 'can_read_all_group_messages': False, 'supports_inline_queries': False}
+2020-11-15 11:14:14,041 - telegram.bot - DEBUG - Exiting: get_me
+2020-11-15 11:14:14,042 - telegram.bot - DEBUG - Entering: get_my_commands
+2020-11-15 11:14:14,156 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - DEBUG - https://api.telegram.org:443 "POST /bot1431872649:AAE0CmcJMDjQKA5PFDKlgkFfQ-_FP2hAxUg/getMyCommands HTTP/1.1" 200 23
+2020-11-15 11:14:14,157 - telegram.bot - DEBUG - []
+2020-11-15 11:14:14,158 - telegram.bot - DEBUG - Exiting: get_my_commands
+2020-11-15 11:14:14,159 - telegram.ext.updater - DEBUG - Bot:1431872649:dispatcher - started
+2020-11-15 11:14:14,160 - telegram.ext.updater - DEBUG - Bot:1431872649:updater - started
+2020-11-15 11:14:14,160 - telegram.ext.updater - DEBUG - Waiting for Dispatcher and polling to start
+2020-11-15 11:14:14,161 - telegram.ext.updater - DEBUG - Updater thread started (polling)
+2020-11-15 11:14:14,162 - telegram.ext.updater - DEBUG - Start network loop retry bootstrap del webhook
+2020-11-15 11:14:14,163 - telegram.bot - DEBUG - Entering: delete_webhook
+2020-11-15 11:14:14,165 - telegram.ext.dispatcher - DEBUG - Dispatcher started
+2020-11-15 11:14:14,232 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - DEBUG - https://api.telegram.org:443 "POST /bot1431872649:AAE0CmcJMDjQKA5PFDKlgkFfQ-_FP2hAxUg/deleteWebhook HTTP/1.1" 200 68
+2020-11-15 11:14:14,233 - telegram.bot - DEBUG - True
+2020-11-15 11:14:14,233 - telegram.bot - DEBUG - Exiting: delete_webhook
+2020-11-15 11:14:14,233 - telegram.ext.updater - DEBUG - Bootstrap done
+2020-11-15 11:14:14,234 - telegram.ext.updater - DEBUG - Start network loop retry getting Updates
+2020-11-15 11:14:14,234 - telegram.bot - DEBUG - Entering: get_updates
+2020-11-15 11:14:55,539 - telegram.ext.dispatcher - DEBUG - Setting singleton dispatcher as <telegram.ext.dispatcher.Dispatcher object at 0x70993730>
+2020-11-15 11:14:55,542 - apscheduler.scheduler - INFO - Scheduler started
+2020-11-15 11:14:55,543 - apscheduler.scheduler - DEBUG - Looking for jobs to run
+2020-11-15 11:14:55,544 - telegram.bot - DEBUG - Entering: get_me
+2020-11-15 11:14:55,545 - apscheduler.scheduler - DEBUG - No jobs; waiting until a job is added
+2020-11-15 11:14:55,547 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.telegram.org
+2020-11-15 11:14:55,821 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - DEBUG - https://api.telegram.org:443 "POST /bot1431872649:AAE0CmcJMDjQKA5PFDKlgkFfQ-_FP2hAxUg/getMe HTTP/1.1" 200 200
+2020-11-15 11:14:55,823 - telegram.bot - DEBUG - {'id': 1431872649, 'first_name': 'AmazonTracker', 'is_bot': True, 'username': 'AMZNscraperBot', 'can_join_groups': True, 'can_read_all_group_messages': False, 'supports_inline_queries': False}
+2020-11-15 11:14:55,824 - telegram.bot - DEBUG - Exiting: get_me
+2020-11-15 11:14:55,824 - telegram.bot - DEBUG - Entering: get_my_commands
+2020-11-15 11:14:55,880 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - DEBUG - https://api.telegram.org:443 "POST /bot1431872649:AAE0CmcJMDjQKA5PFDKlgkFfQ-_FP2hAxUg/getMyCommands HTTP/1.1" 200 23
+2020-11-15 11:14:55,882 - telegram.bot - DEBUG - []
+2020-11-15 11:14:55,882 - telegram.bot - DEBUG - Exiting: get_my_commands
+2020-11-15 11:14:55,883 - telegram.ext.updater - DEBUG - Bot:1431872649:dispatcher - started
+2020-11-15 11:14:55,884 - telegram.ext.updater - DEBUG - Bot:1431872649:updater - started
+2020-11-15 11:14:55,885 - telegram.ext.updater - DEBUG - Waiting for Dispatcher and polling to start
+2020-11-15 11:14:55,885 - telegram.ext.updater - DEBUG - Updater thread started (polling)
+2020-11-15 11:14:55,886 - telegram.ext.updater - DEBUG - Start network loop retry bootstrap del webhook
+2020-11-15 11:14:55,886 - telegram.bot - DEBUG - Entering: delete_webhook
+2020-11-15 11:14:55,889 - telegram.ext.dispatcher - DEBUG - Dispatcher started
+2020-11-15 11:14:55,945 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - DEBUG - https://api.telegram.org:443 "POST /bot1431872649:AAE0CmcJMDjQKA5PFDKlgkFfQ-_FP2hAxUg/deleteWebhook HTTP/1.1" 200 68
+2020-11-15 11:14:55,946 - telegram.bot - DEBUG - True
+2020-11-15 11:14:55,947 - telegram.bot - DEBUG - Exiting: delete_webhook
+2020-11-15 11:14:55,947 - telegram.ext.updater - DEBUG - Bootstrap done
+2020-11-15 11:14:55,947 - telegram.ext.updater - DEBUG - Start network loop retry getting Updates
+2020-11-15 11:14:55,948 - telegram.bot - DEBUG - Entering: get_updates
+2020-11-15 11:14:57,371 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - DEBUG - https://api.telegram.org:443 "POST /bot1431872649:AAE0CmcJMDjQKA5PFDKlgkFfQ-_FP2hAxUg/getUpdates HTTP/1.1" 200 360
+2020-11-15 11:14:57,373 - telegram.bot - DEBUG - Getting updates: [514363315]
+2020-11-15 11:14:57,375 - telegram.bot - DEBUG - [<telegram.update.Update object at 0x6ffcc2d0>]
+2020-11-15 11:14:57,376 - telegram.bot - DEBUG - Exiting: get_updates
+2020-11-15 11:14:57,376 - telegram.bot - DEBUG - Entering: get_updates
+2020-11-15 11:14:57,378 - telegram.ext.dispatcher - DEBUG - Processing Update: {'update_id': 514363315, 'message': {'message_id': 251, 'date': 1605435297, 'chat': {'id': 106115352, 'type': 'private', 'first_name': 'Davide', 'last_name': 'Corradini'}, 'text': '/help', 'entities': [{'type': 'bot_command', 'offset': 0, 'length': 5}], 'caption_entities': [], 'photo': [], 'new_chat_members': [], 'new_chat_photo': [], 'delete_chat_photo': False, 'group_chat_created': False, 'supergroup_chat_created': False, 'channel_chat_created': False, 'from': {'id': 106115352, 'first_name': 'Davide', 'is_bot': False, 'last_name': 'Corradini', 'language_code': 'it'}}}
+2020-11-15 11:14:57,381 - telegram.bot - DEBUG - Entering: send_message
+2020-11-15 11:14:57,383 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - DEBUG - Starting new HTTPS connection (2): api.telegram.org
+2020-11-15 11:14:57,745 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - DEBUG - https://api.telegram.org:443 "POST /bot1431872649:AAE0CmcJMDjQKA5PFDKlgkFfQ-_FP2hAxUg/sendMessage HTTP/1.1" 200 810
+2020-11-15 11:14:57,747 - telegram.bot - DEBUG - {'message_id': 252, 'date': 1605435297, 'chat': {'id': 106115352, 'type': 'private', 'first_name': 'Davide', 'last_name': 'Corradini'}, 'text': '/start\n Start the BOT\n \n /stop\n Stop the BOT\n \n /help\n This message\n \n /additem <amazon part number> <prezzo>\n To add a new item to the database \n \n /debugconnection\n Check if the bot is still running\n \n /debugtracking\n Check if the scraping is running', 'entities': [{'type': 'bot_command', 'offset': 0, 'length': 6}, {'type': 'bot_command', 'offset': 25, 'length': 5}, {'type': 'bot_command', 'offset': 48, 'length': 5}, {'type': 'bot_command', 'offset': 71, 'length': 8}, {'type': 'bot_command', 'offset': 149, 'length': 16}, {'type': 'bot_command', 'offset': 204, 'length': 14}], 'caption_entities': [], 'photo': [], 'new_chat_members': [], 'new_chat_photo': [], 'delete_chat_photo': False, 'group_chat_created': False, 'supergroup_chat_created': False, 'channel_chat_created': False, 'from': {'id': 1431872649, 'first_name': 'AmazonTracker', 'is_bot': True, 'username': 'AMZNscraperBot'}}
+2020-11-15 11:14:57,748 - telegram.bot - DEBUG - Exiting: send_message
