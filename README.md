@@ -9,7 +9,7 @@ The modules you have to import are:
 * [BeautifulSoup (BS4)](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) - to scrap Amazon website
 * [Telegram API](https://python-telegram-bot.org/) - of course, this is a Telegram Bot
 
-Scheduling of the searching jobs are managed by [`Telegram.ext.job_queue`](https://python-telegram-bot.readthedocs.io/en/stable/telegram.ext.jobqueue.html) class, in this way you can avoid a 'while True' loop that will prevent to send new commands to the Bot.
+Scheduling of the searching jobs are managed by [`Telegram.ext.JobQueue`](https://python-telegram-bot.readthedocs.io/en/stable/telegram.ext.jobqueue.html) class, in this way you can avoid a 'while True' loop that will prevent to send new commands to the Bot.
 
 ## Links that I found useful
 * [Job_queue issue on StackOverflow](https://stackoverflow.com/questions/52556939/how-to-use-jobqueue-in-python-telegram-bot)
