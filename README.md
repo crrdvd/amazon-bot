@@ -1,5 +1,5 @@
 # amazon-bot
-A simple Amazon price tracking bot.
+A simple Amazon price tracking bot written in Python.
 
 ## Brief description of the code
 This Telegram bot checks if the price of a given Amazon item is below a given threshold value, both the url and the limit value are provided by a csv file.
