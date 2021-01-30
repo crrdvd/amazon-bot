@@ -98,7 +98,7 @@ def help(update, context):
 	context.bot.send_message(chat_id=c_id, text=msg)
 
 def main():
-	u = Updater(token="1431872649:AAE0CmcJMDjQKA5PFDKlgkFfQ-_FP2hAxUg", use_context=True)
+	u = Updater(token=YOUR_TOKEN, use_context=True)
     
 	u.dispatcher.add_handler(CommandHandler("start", start, pass_job_queue=True))
 	u.dispatcher.add_handler(CommandHandler("stop", stop, pass_job_queue=True))
